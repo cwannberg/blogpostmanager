@@ -1,36 +1,51 @@
-# Todo List
+# Blog Post Manager
 
-In this exercise I want you to create a todo list with Vanilla JavaScript. The todo list is will be simple, not any fancy functionalities or animations _(unless you relly want to get creative)_. The purpose is to solve as much as possible with DOM manipulation. The initial files have been created for you so you can just start coding!
+In this exercise, you will build a simple blog post manager using **Vanilla TypeScript** and **Vite**. The goal is not to create a fully-fledged blogging platform, but to practice DOM manipulation, events, _( local storage - extra )_, and basic styling.
 
-## Instructions
+## 📌 Instructions
 
-### Basics
+### ✅ Basics
 
-- All todos should be visible in some sort of list on the start page.
+- All blog posts should be displayed in a list on the page.
 
-- There should be som sort of form where you can add new todos.
+- There should be a form where users can add a new blog post with at least:
 
-- You should should be able to be mark a todo as completed
+  - A **title**
+  - A **body**
+  - An **author**
 
-- You should be able to remove a todo
+- Each blog post should show:
 
-- You should be able to move a todo up or down. In other words, change the order of the todos
+  - The **title**
+  - The **author**
+  - The **content**
+  - A **timestamp** (when it was created)
 
-- There should always be a copy of the current updated todo list in local storage. if you refresh the web page, no todos should disappear. Even if you close your browser and open it again, the todos should be loaded from local storage.
+- Each blog post should have buttons to:
 
-- Styling is important in frontend development, don't neglect that. But a piece of advice, do the styling part or the logic part first, don't do them at the same time. On thing at a time.
+  - ✏️ **Edit** the post in place
+  - 🗑️ **Delete** the post
 
-### More complexity
+- Style your application! Design matters in frontend development. But remember: it's usually best to finish the functionality or the styling first — don't do both at the same time.
 
-- An author and timestamp should be visible on every todo.
+---
 
-- You should be able to edit a todo in place.
+### 🚀 More Complexity
 
-- You should be able to sort the todos after timestamp or author. Timestamp should be the default sorting.
+- Allow **sorting** of blog posts by:
 
-## Extra stuff that you can use.
+  - Timestamp (newest first – _default_)
+  - Author (alphabetically)
 
-### Google fonts
+- Blog posts should be **stored in local storage** and automatically loaded when the page is refreshed. Even if you close your browser and reopen it, the posts should still be there.
+
+- Optionally, let users **filter posts** by author name.
+
+- Use **textareas** for writing blog content to support multiline input.
+
+## 🧰 Extra Stuff You Can Use
+
+### 🖋️ Google Fonts
 
 [Google fonts - Docs & Catalog](https://fonts.google.com/)
 
@@ -45,16 +60,16 @@ Browse the fonts, in order to use one in your application follow these steps:
 4. Cope the code inside the style-tags to the top of you css file and add the font-family to your html-tag
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 html {
-  font-family: "Roboto", serif;
+  font-family: 'Roboto', serif;
 }
 ```
 
 This will set the default font-family on all the elements inside the html-tag. If you want a different font-family on certain elements you can just add those in different css-selectors.
 
-### Material Icons
+### 🎨 Material Icons
 
 [Material icons - Docs & Catalog](https://fonts.google.com/icons)
 
@@ -63,10 +78,7 @@ Browse the icons, in order to use them in your application follow these steps:
 1. Copy this code and add it inside the head-tag on your HTML document.
 
 ```js
-<link
-  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-  rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 ```
 
 2. Pick an icon by clicking on it. A side meny should come in from the right.
