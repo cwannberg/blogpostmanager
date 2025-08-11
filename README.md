@@ -2,6 +2,14 @@
 
 In this exercise, you will build a simple blog post manager using **Vanilla TypeScript** and **Vite**. The goal is not to create a fully-fledged blogging platform, but to practice DOM manipulation, events, _( local storage - extra )_, and basic styling.
 
+Remember to create a vite project before you start. You can do it in this folder after you have cloned the repo. The new vite project will be in a subfolder to thie project.
+
+```bash
+npm create vite@latest
+```
+
+Follow the steps, pick a name of the project _( will be the name of the subfolder that is created inside this repo )_ and choose **vanilla typescript**.
+
 ## 📌 Instructions
 
 ### ✅ Basics
