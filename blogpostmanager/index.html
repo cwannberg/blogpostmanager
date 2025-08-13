@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iduns hemsida</title>
+  </head>
+  <body>
+    <header>
+      <h1>Iduns hemsida</h1>
+    </header>
+    <main>
+      <section id="sidebar">
+          <h2>Blogposts</h2>
+          <ul>
+            <li>Post 1</li>
+            <li>Post 2</li>
+            <li>Post 3</li>
+          </ul>
+      </section>
+      <section class="blog">
+        <h2>New post</h2>
+        <form class="blogpost-form">
+          <div class="form">
+            <label for="title-input">Title</label>
+            <input class="title" id="title-input" placeholder="Title of the blogpost" required type="text">
+          </div>
+          <div class="form">
+            <label for="content-input">Content</label>
+            <textarea class="content" id="content-input" placeholder="Content" required type="text"></textarea>
+          </div>
+            <div class="form">
+            <label for="author-input">Author</label>
+            <input class="author" id="author-input" placeholder="Authors name" required type="text">
+          </div>
+            <button class="add-btn" type="submit">Post</button>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/sidebar.ts"></script>
+  </body>
+</html>
