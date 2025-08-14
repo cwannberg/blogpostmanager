@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gullivers hemsida</title>
+   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <title>Bloggigt</title>
   </head>
   <body>
     <header>
@@ -11,7 +13,7 @@
       <h3>A place where blogging happens</h3>
     </header>
     <main>
-      <section id="sidebar">
+      <section class="sidebar">
         <button class="new-post-btn">New post</button>
           <h2>Blogposts</h2>
             <ul class="blogpost-list">
@@ -23,7 +25,7 @@
           <form class="blogpost-form">
             <div class="form">
               <label for="title-input">Title</label>
-              <input class="title" id="title-input" placeholder="Title of the blogpost" required type="text">
+              <input class="title" id="title-input" placeholder="Title" required type="text">
             </div>
             <div class="form">
               <label for="content-input">Content</label>
@@ -33,7 +35,10 @@
               <label for="author-input">Author</label>
               <input class="author" id="author-input" placeholder="Authors name" required type="text">
             </div>
-              <button class="post-btn" type="submit">Post</button>
+            <div class="blog-buttons">
+              <button class="post-btn btn-style" type="submit">Post</button>
+              <button class="save-btn btn-style hidden" type="submit">Save</button>
+            </div>
           </form>
         </article>
         <div class="blog-content">

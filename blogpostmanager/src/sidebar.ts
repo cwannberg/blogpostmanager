@@ -22,8 +22,20 @@ postBtn?.addEventListener("click", (e) => {
     toggleForm(true);
 });
 
-export function addBlogPostToList(post: {title: string}): void{
+export function addBlogPostToList(post: {title: string; id: string}): void{
         const listElement = document.createElement('li');
-        listElement.textContent=`${post.title}`;
-        blogpostUListEle?.appendChild(listElement);
+
+        const link = document.createElement("a");
+        link.textContent = post.title;
+        link.href = `${post.id};`
+        link.classList.add("blogpost-link");
+
+         link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const postEl = document.getElementById(post.id);
+        postEl?.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    listElement.appendChild(link);
+    blogpostUListEle?.appendChild(listElement);
     }
