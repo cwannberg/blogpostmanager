@@ -3,12 +3,13 @@ import './css/style.css'
 const sidebar = document.querySelector<HTMLElement>('#sidebar')!;
 
 sidebar.innerHTML = /*html*/ `
+<button id="btn">New post</button>
  <h2>Blogposts</h2>
-        <ul>
-          <li>Post 1</li>
-          <li>Post 2</li>
-          <li>Post 3</li>
-          <li>Post 4</li>
-        </ul>
+    <ul class="blogpost-list">
 
+    </ul>
 `
+
+export function getBlogpostUListElement(): HTMLUListElement | null {
+    return document.querySelector<HTMLUListElement>('.blogpost-list');
+}
