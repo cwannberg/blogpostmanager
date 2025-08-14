@@ -1,5 +1,6 @@
 import { BlogPosts } from './data';
 import { getBlogpostUListElement } from './sidebar';
+import { toggleForm } from './formManager';
 
 const blogpostUListEle = getBlogpostUListElement();
 const blogPosts = document.querySelector(".blog-content");
@@ -15,33 +16,37 @@ function addDummyPosts(): void{
 addDummyPosts();
 
 export function createBlogPost(): HTMLElement{
+    const now = new Date();
     const newPost = {
-        title : document.querySelector<HTMLInputElement>(".title-input")?.value!,
-        content : document.querySelector<HTMLTextAreaElement>(".content-input")?.value!,
-        author : document.querySelector<HTMLInputElement>(".author-input")?.value!,
-        timeStamp: Date.now()
+        title : document.querySelector<HTMLInputElement>("#title-input")?.value!,
+        content : document.querySelector<HTMLTextAreaElement>("#content-input")?.value!,
+        author : document.querySelector<HTMLInputElement>("#author-input")?.value!,
+        timeStamp: now.toLocaleString("sv-SE", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit"
+        })
     };
-    // console.log("Nytt inlägg." + newPost.title);
-    // BlogPosts?.push(newPost);
-    // const li = document.createElement("li");
-    // li.textContent = `${newPost.title}`;
-    // blogpostUListEle?.appendChild(li);
 
     const newPostEl = document.createElement('article');
-    newPostEl.classList.add('newPost');
+    newPostEl.classList.add('article-blogpost');
 
     newPostEl.innerHTML = /*html*/ `
-    <h3>${newPost.title}</h3>
-    <p>${newPost.timeStamp}</p>
-    <p>${newPost.content}</p>
-    <p>${newPost.author}</p>
+    <h3 class="newpost-title">${newPost.title}</h3>
+    <p class="newpost-timestamp">${newPost.timeStamp}</p>
+    <p class="newpost-content">${newPost.content}</p>
+    <p class="newpost-author">${newPost.author}</p>
     `
-    blogPosts?.insertAdjacentElement('afterend', newPostEl);
+    blogPosts?.appendChild(newPostEl);
     return newPostEl;
 }
 
 
-const postBtn = document.querySelector("#post-Btn");
-postBtn?.addEventListener("click", () => {
-  createBlogPost();
+const postBtn = document.querySelector(".post-btn");
+postBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    createBlogPost();
+    toggleForm(false);
 });

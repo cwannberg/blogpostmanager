@@ -25,15 +25,11 @@ html {
 	background: #685454; 
 }
 
-body{
-    height: 100vh;
-}
-
 main {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    height: 100%;
+    min-height: 100vh;
 }
 
 header{
@@ -62,7 +58,6 @@ h3{
     display: flex;
     flex-direction: column;
     width: 65%;
-    height: 100%;
     gap: 1rem;
     background-color: #ea8a8a;
 }
@@ -104,10 +99,13 @@ h3{
 
 .blogpost-form .form .content {
     width: 100%;
-    min-height: 50vh;
+    min-height: 200px;
     padding: 10px;
     border: 2px solid #685454;
     border-radius: 10px;
+    resize: none;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 .post-btn{
     align-self: flex-end;
@@ -120,4 +118,20 @@ h3{
 .blog-post{
     width: 100%;
     background-color: white;
+}
+
+.blog-content {
+    background-color:#685454;
+}
+
+.article-blogpost p{
+    color: white;
+}
+
+.hidden {
+    display:none !important;
+}
+.new-blogpost {
+    display: flex;
+    flex-direction: column;
 }
