@@ -1,6 +1,6 @@
 import type { IBlogPost } from './types'
 
-export const BlogPosts: IBlogPost[] = [ 
+export const DummyPosts: IBlogPost[] = [ 
     {
         title: 'Hej',
         content: "Det här är mitt första blogginlägg",

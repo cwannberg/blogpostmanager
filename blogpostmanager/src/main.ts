@@ -1,21 +1,9 @@
-import { BlogPosts } from './data';
-import { getBlogpostUListElement } from './sidebar';
 import { toggleForm } from './formManager';
+import { addBlogPostToList } from './sidebar';
 
-const blogpostUListEle = getBlogpostUListElement();
 const blogPosts = document.querySelector(".blog-content");
-function addDummyPosts(): void{
 
-    BlogPosts.forEach(post => {
-        const listElement = document.createElement('li');
-        listElement.textContent=`${post.title}`;
-        blogpostUListEle?.appendChild(listElement);
-    });
-}
-
-addDummyPosts();
-
-export function createBlogPost(): HTMLElement{
+export function createBlogPost(): void{
     const now = new Date();
     const newPost = {
         title : document.querySelector<HTMLInputElement>("#title-input")?.value!,
@@ -40,9 +28,8 @@ export function createBlogPost(): HTMLElement{
     <p class="newpost-author">${newPost.author}</p>
     `
     blogPosts?.appendChild(newPostEl);
-    return newPostEl;
+    addBlogPostToList(newPost);
 }
-
 
 const postBtn = document.querySelector(".post-btn");
 postBtn?.addEventListener("click", (e) => {
