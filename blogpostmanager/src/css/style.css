@@ -25,9 +25,8 @@ header{
 h1 {
     color:#f2f2f2;
     padding: 10px;
-    text-outline: 5px solid #685454;
 }
-h3{
+h3 {
     color:#f2f2f2;
     padding: 10px;
     font-style: italic;
@@ -35,31 +34,57 @@ h3{
 .sidebar {
     display: flex;
     flex-direction: column;
-    width: 18%;
+    width: 25%;
     background-color: white;
     margin-left: 20px;
     border: 1px solid #ea8a8a;
     border-radius: 10px;
     padding: 10px;
 }
-.sidebar h2 {
+.sidebar  .blogpost-section .sidebar-h2 {
     padding: 10px;
     color: #B04E52;
+    text-align: center;
 }
-.new-post-btn{
+.btn-style{
     padding: 10px;
     border: 2px solid #E9A502;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 1rem;
+    width: 5rem;
     background-color: #EFB834;
+    color: white;
+    font-weight: bold;
+}
+.new-post-btn{
+    align-self: center;
+    width: auto;
+}
+.blog-buttons{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 1rem;
 }
 .sidebar ul.blogpost-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 5px;
     align-items: flex-start;
 }
-
+.sidebar ul.blogpost-list li,
+.sidebar ul.blogpost-list li a
+{
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #191200;
+    text-decoration: none;
+}
+.sidebar .blogpost-section {
+    border: 1px solid #ea8a8a;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
 .middle-section {
     display: flex;
     flex-direction: column;
@@ -79,8 +104,9 @@ h3{
     border: 1px solid #ea8a8a;
     border-radius: 10px;
 }
-.blog h2{
+.blog-h2{
     background-color: white;
+    color:#B04E52;
 }
 
 .blogpost-form{
@@ -105,6 +131,7 @@ h3{
 }
 .blogpost-form .form label{
     background-color: white;
+    margin: 5px;
 }
 
 .blogpost-form .form .content {
@@ -116,21 +143,6 @@ h3{
     resize: none;
     overflow-y: auto;
     box-sizing: border-box;
-}
-.btn-style{
-    align-self: flex-end;
-    padding: 10px;
-    border: 2px solid #E9A502;
-    border-radius: 10px;
-    font-size: 14px;
-    width: 5rem;
-        background-color: #EFB834;
-}
-.blog-buttons{
-    display:flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    gap: 1rem;
 }
 .blog-post{
     width: 100%;

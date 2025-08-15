@@ -14,26 +14,28 @@
     </header>
     <main>
       <section class="sidebar">
-        <button class="new-post-btn">New post</button>
-          <h2>Blogposts</h2>
+        <button class="new-post-btn btn-style">New post</button>
+        <div class="blogpost-section">
+          <h2 class="sidebar-h2">Blogposts</h2>
             <ul class="blogpost-list">
             </ul>
+        </div>
       </section>
       <section class="middle-section">
         <article class="new-blogpost">
-          <h2>New post</h2>
+          <h2 class="blog-h2">New post</h2>
           <form class="blogpost-form">
             <div class="form">
               <label for="title-input">Title</label>
-              <input class="title" id="title-input" placeholder="Title" required type="text">
+              <input class="title" id="title-input" placeholder="Title of the blogpost" required type="text">
             </div>
             <div class="form">
               <label for="content-input">Content</label>
-              <textarea class="content" id="content-input" placeholder="Content" required></textarea>
+              <textarea class="content" id="content-input" placeholder="Write your blogpost here" required></textarea>
             </div>
             <div class="form">
               <label for="author-input">Author</label>
-              <input class="author" id="author-input" placeholder="Authors name" required type="text">
+              <input class="author" id="author-input" placeholder="The authors name" required type="text">
             </div>
             <div class="blog-buttons">
               <button class="post-btn btn-style" type="submit">Post</button>
